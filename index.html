@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title> form validation</title>    
+    <!-- <script defer src="js/class.js"></script> -->
+    <script defer src="js/pwd.js"></script>
+    <link rel="stylesheet" href="css/style.css">   
+    <script>
+        window.onload = function(){
+            new Validate("#join", {
+                items : [
+                    "userid", "pwd", "pwd2", "email", "gender"
+                ]          
+            });   
+        }
+    </script>
+</head>
+<body>
+
+    <section class='content members'>  
+        <div class="inner">
+            <h1>Members <span>회원가입</span></h1>
+
+            <form action="result.html" method='get' id="join">
+                <fieldset>
+                    <legend class='hidden'>회원가입</legend>                  
+
+                    <h2>Member Information</h2>
+                    <table>
+                        <caption class="hidden">회원정보</caption>
+                        <tr>
+                            <th>
+                                <label for="userid" >User ID</label>
+                            </th>
+                            <td>
+                                <input type="text" id='userid' name='userid' placeholder='아이디를 입력하세요' class="required">
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>
+                                <label for="pwd">Password</label>
+                            </th>
+                            <td>
+                                <input type="password" id='pwd' name='pwd' placeholder="패스워드를 입력하세요" class="required">
+                            </td>
+                        </tr>   
+                        <tr>
+                            <th>
+                                <label for="pwd2">Re Password</label>
+                            </th>
+                            <td>
+                                <input type="password" id='pwd2' name='pwd2' placeholder="패스워드를 재 입력하세요" class="required">
+                            </td>
+                        </tr>      
+                        <tr>
+                            <th>
+                                <label for="email">E-Mail</label>
+                            </th>
+                            <td>
+                                <input type="text" id='email' name='email' placeholder='이메일 아이디를 입력하세요' class="required">
+                                @
+                                <select name="domain" id="domain">
+                                    <option value="nate.com" selected>nate.com</option>
+                                    <option value="naver.com">naver.com</option>
+                                    <option value="google.com">google.com</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>
+                                <label for="hobby">Interests</label>
+                            </th>
+                            <td>
+                                <input type="checkbox" id='hobby1' name='hobby' value='sports' class="required">
+                                <label for="hobby1">스포츠</label>
+                                <input type="checkbox" id='hobby2' name='hobby' value='music' class="required">
+                                <label for="hobby2">음악</label>
+                                <input type="checkbox" id='hobby3' name='hobby' value='computer game' class="required">
+                                <label for="hobby3">게임</label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>
+                                <label for="gender">Gender</label>                                    
+                            </th>
+                            <td>
+                                <input type="radio" id='male' name='gender' value='male' class="required">
+                                <label for="male">남성</label>
+                                <input type="radio" id='female' name='gender' value='female' class="required">
+                                <label for="female">여성</label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>
+                                <label for="comment">Leave Comments</label>
+                            </th>
+                            <td>
+                                <textarea name="comments" id="comments" placeholder="이곳에 남기실 말을 적어주세요." class=required></textarea>
+                            </td>
+                        </tr>
+                        <tr>                           
+                            <td colspan='2'>
+                                <input type="reset" value='CANCEL'>
+                                <input type="submit" value='SEND'>
+                            </td>
+                        </tr>                        
+                    </table>
+                </fieldset>
+            </form>
+        </div>
+    </section>  
+    
+</body>
+</html>

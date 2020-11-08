@@ -1,0 +1,49 @@
+ @charset "utf-8";
+
+/* reset */
+* {margin:0px; padding:0px;}
+ul,ol,li {list-style:none;}
+a {text-decoration:none; outline:1; color:#777;}
+img, fieldset {border:0;}
+table, th, td {border-collapse: collapse;}
+input, select, textarea, form, img, label {vertical-align:middle; box-sizing:border-box;}
+textarea {resize:none;}
+.hidden {position:absolute; top:-999999px; opacity:0;}
+
+.red {background:rgb(255, 226, 231)!important;}
+
+
+/* content */
+.content {width:100%;}
+.content>.sub_visual {width:100%; height:250px; background-color:#222; background-position:center; background-size:cover; background-repeat:no-repeat; position:relative;}
+.content>.inner {width:1180px; min-height:500px; margin:120px auto 250px; position:relative; transition:0.5s;}
+.content>.inner>h1 {font:normal 32px/1 'arial'; color:#444; letter-spacing:1px;}
+.content>.inner>h1::after {content:''; display:block; width:40px; height:2px; background:#444; margin-top:14px; margin-bottom:60px; margin-left:5px;}
+.content>.inner>h1>span {font:14px/1 '맑은 고딕'; color:#777; margin-left:10px;}
+.content>.inner>h1>span::before {content:'/'; margin-right:10px;}
+
+
+.members h2 {font:bold 18px/1 'arial'; color:#555; margin-bottom:20px;}
+.members .agreement {margin-bottom:60px;}
+.members .agreement textarea {width:100%; height:160px; box-sizing:border-box; padding:20px; margin-bottom:10px; font:15px/1.8 'arial'; color:#777; background:rgba(0,0,0,0.05);}
+.members .agreement input {margin-left:10px;}
+.members .agreement label {font-size:11px; color:#888;}
+
+.members table {width:100%;}
+.members tr:nth-of-type(1) {border-top:2px solid #000;}
+.members tr:last-child {border-bottom:2px solid #000;}
+.members tr:last-child td {text-align:center;}
+.members th {width:20%; border-bottom:1px solid #ddd; padding:20px 40px; text-align:left; color:#666; border-right:1px solid #ddd;}
+.members td {width:80%; border-bottom:1px solid #ddd; padding:20px 40px; text-align:left; }
+.members td.error {background:pink;}
+
+.members input[type=text], .members input[type=password], .members select {width:30%; height:30px; padding:0px 20px; padding-right:0px; background:rgba(0,0,0,0.03); border:1px solid #aaa; transition:0.5s;}
+.members input[type=text]:hover, .members input[type=password]:hover, .members select:hover {background:lightcyan;}
+.members input[type=text]:focus, .members input[type=password]:focus, .members select:focus {background:lightcyan;}
+.members input[type=text]::-webkit-input-placeholder, .members input[type=password]::-webkit-input-placeholder, .members select::-webkit-input-placeholder {color:#aaa;}
+.members input[type=submit], .members input[type=reset] {width:120px; height:40px; border-radius:20px; font:bold 12px/40px 'arial'; color:#666; margin:0px 10px; cursor:pointer; border:1px solid #888; background:transparent; transition:0.5s;}
+.members input[type=submit]:hover, .members input[type=reset]:hover {background:#111; box-shadow:5px 5px 10px rgba(0,0,0,0.3); color:#fff; font-weight:bold;}
+.members label {margin-right:20px;}
+.members table textarea {width:100%; height:120px; background:rgba(0,0,0,0.03); border:1px solid #aaa; padding:20px; transition:0.5s;}
+.members table textarea:hover, .members table textarea:focus {background:lightcyan;}
+
